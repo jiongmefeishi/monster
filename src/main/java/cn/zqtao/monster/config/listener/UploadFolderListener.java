@@ -52,7 +52,7 @@ public class UploadFolderListener implements ApplicationListener<ApplicationRead
             String uploadPathKey = "noteblog.upload.path";
             String path = env.getProperty(uploadPathKey);
             if (!StringUtils.isEmpty(path)) {
-                log.info("「笔记博客」APP 文件上传路径设置为：[{}]", path);
+                log.info("「怪兽营」APP 文件上传路径设置为：[{}]", path);
                 path = path.replace("file:", "");
                 File filePath = new File(path + "file/");
                 File imgPath = new File(path + "img/");
@@ -64,13 +64,13 @@ public class UploadFolderListener implements ApplicationListener<ApplicationRead
                     i = imgPath.mkdirs();
                 }
                 if (f && i) {
-                    log.info("「笔记博客」APP 成功创建上传文件夹目录：[{}] 和 [{}]", path + "file/", path + "img/");
+                    log.info("「怪兽营」APP 成功创建上传文件夹目录：[{}] 和 [{}]", path + "file/", path + "img/");
                 } else if (f) {
-                    log.info("「笔记博客」APP 目录 [{}] 已存在上传文件夹或创建失败", path + "img/");
+                    log.info("「怪兽营」APP 目录 [{}] 已存在上传文件夹或创建失败", path + "img/");
                 } else if (i) {
-                    log.info("「笔记博客」APP 目录 [{}] 已存在上传文件夹或创建失败", path + "file/");
+                    log.info("「怪兽营」APP 目录 [{}] 已存在上传文件夹或创建失败", path + "file/");
                 } else {
-                    log.info("「笔记博客」APP 已存在上传文件夹！");
+                    log.info("「怪兽营」APP 已存在上传文件夹！");
                 }
             } else {
                 log.error("上传路径未正确设置");

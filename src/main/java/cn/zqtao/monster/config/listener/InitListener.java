@@ -32,9 +32,6 @@ import static cn.zqtao.monster.model.constant.NoteBlogV4.Param.*;
 /**
  * spring boot 容器启动完成之后
  * 创建完表之后，插入一些初始值
- * created by Wuwenbin on 2018/7/15 at 17:14
- *
- * @author wuwenbin
  */
 @Slf4j
 @Component
@@ -67,13 +64,13 @@ public class InitListener implements ApplicationListener<ApplicationReadyEvent> 
 
     @Override
     public void onApplicationEvent(ApplicationReadyEvent applicationReadyEvent) {
-        log.info("「笔记博客」App 正在准备，请稍后...");
+        log.info("「怪兽营」App 正在准备，请稍后...");
         long roleCnt = roleRepository.count();
         //没有初始化角色信息
         if (roleCnt == 0) {
-            log.info("「笔记博客」App 正在初始化权限系统，请稍后...");
+            log.info("「怪兽营」App 正在初始化权限系统，请稍后...");
             setUpAuthority(false);
-            log.info("「笔记博客」App 权限系统初始化完毕...");
+            log.info("「怪兽营」App 权限系统初始化完毕...");
         } else {
             //已经包含初始化后的角色信息，查出角色名为ROLE_MASTER的对象，没有就抛出异常
             Optional<NBSysRole> role = roleRepository.findOne(Example.of(NBSysRole.builder().name("ROLE_MASTER").build()));
@@ -86,18 +83,18 @@ public class InitListener implements ApplicationListener<ApplicationReadyEvent> 
 
         long panelCnt = panelRepository.count();
         if (panelCnt != NBPanel.PanelDom.values().length) {
-            log.info("「笔记博客」App 正在初始化首页右侧面板设置，请稍后...");
+            log.info("「怪兽营」App 正在初始化首页右侧面板设置，请稍后...");
             panelRepository.deleteAll();
             setUpPanel();
-            log.info("「笔记博客」App 首页右侧面板初始化完毕...");
+            log.info("「怪兽营」App 首页右侧面板初始化完毕...");
         }
         NBParam nbParam = paramRepository.findByName(INIT_STATUS);
         if (nbParam == null || StringUtils.isEmpty(nbParam.getValue()) || paramRepository.count() == 1) {
             setUpAppInitialSettings();
             setUpAppInitialText();
-            log.info("「笔记博客」App 参数初始化完毕！");
+            log.info("「怪兽营」App 参数初始化完毕！");
         } else {
-            log.info("「笔记博客」App 已经完成初始化，略过初始化步骤。");
+            log.info("「怪兽营」App 已经完成初始化，略过初始化步骤。");
         }
     }
 
@@ -160,14 +157,14 @@ public class InitListener implements ApplicationListener<ApplicationReadyEvent> 
     private void setUpRootMenu() {
         long cnt = menuRepository.countByParentId(0);
         if (cnt == 0) {
-            log.info("「笔记博客」App 初始化设置根菜单...");
+            log.info("「怪兽营」App 初始化设置根菜单...");
             NBSysMenu menu = NBSysMenu.builder()
                     .name("菜单根目录")
                     .icon("layui-icon layui-icon-home")
                     .type(NBSysMenu.MenuType.ROOT)
                     .parentId(0L).build();
             menuRepository.save(menu);
-            log.info("「笔记博客」App 设置根菜单完毕");
+            log.info("「怪兽营」App 设置根菜单完毕");
         }
     }
 
@@ -207,7 +204,7 @@ public class InitListener implements ApplicationListener<ApplicationReadyEvent> 
     }
 
     /**
-     * 笔记博客的一些设置的初始值
+     * 怪兽营的一些设置的初始值
      */
     private void setUpAppInitialSettings() {
         String[][] settings = new String[][]{

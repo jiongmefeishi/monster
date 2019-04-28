@@ -52,16 +52,16 @@ public class ResourceListener implements ApplicationListener<ContextRefreshedEve
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        log.info("「笔记博客」APP 正在检测初始化状态，请稍后...");
+        log.info("「怪兽营」APP 正在检测初始化状态，请稍后...");
         NBParam nbParam = paramRepository.findByName(INIT_STATUS);
         if (nbParam == null || StringUtils.isEmpty(nbParam.getValue())) {
-            log.info("「笔记博客」APP 未初始化，初始化中，请稍后...");
+            log.info("「怪兽营」APP 未初始化，初始化中，请稍后...");
             setUpAppInitialState();
         }else {
-            log.info("「笔记博客」APP 已初始化，开始准备其它内容，请稍后...");
+            log.info("「怪兽营」APP 已初始化，开始准备其它内容，请稍后...");
         }
 
-            log.info("「笔记博客」App 正在启动中，请稍后...");
+            log.info("「怪兽营」App 正在启动中，请稍后...");
             List<Map<String, Object>> resources = new ArrayList<>(50);
             //以防万一，先移除以前的资源
             context.removeApplicationObj(NoteBlogV4.Init.MASTER_RESOURCES);
@@ -121,7 +121,7 @@ public class ResourceListener implements ApplicationListener<ContextRefreshedEve
         NBParam initStatus = NBParam.builder()
                 .name(INIT_STATUS)
                 .value(INIT_NOT)
-                .remark("标记用户是否在「笔记博客」App 的初始化设置页面设置过")
+                .remark("标记用户是否在「怪兽营」App 的初始化设置页面设置过")
                 .level(0)
                 .build();
         paramRepository.save(initStatus);
