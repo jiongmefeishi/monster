@@ -4,7 +4,7 @@ server:
 #项目配置
 spring:
   profiles:
-    active: noteblogv4
+    active: dev
   application:
     name: NoteBlogV4
   #资源配置
