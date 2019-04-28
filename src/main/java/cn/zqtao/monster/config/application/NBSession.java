@@ -19,10 +19,6 @@ import java.time.LocalDateTime;
 import static java.lang.Boolean.FALSE;
 import static java.time.LocalDateTime.now;
 
-/**
- * created by Wuwenbin on 2018/2/7 at 20:56
- * @author wuwenbin
- */
 @Slf4j
 @Data
 @Builder

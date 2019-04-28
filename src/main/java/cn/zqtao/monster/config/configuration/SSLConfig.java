@@ -10,11 +10,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 
-/**
- * created by Wuwenbin on 2019-01-30 at 14:48
- *
- * @author wuwenbin
- */
 @Configuration
 public class SSLConfig {
 

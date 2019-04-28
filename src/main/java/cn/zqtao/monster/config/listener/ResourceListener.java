@@ -31,9 +31,6 @@ import static cn.zqtao.monster.model.constant.NoteBlogV4.Init.INIT_STATUS;
 /**
  * 资源监听器
  * 检测{@code @NBAuth}注解的资源存入数据库（默认给网站管理员全部权限，否则无法访问应用）
- * created by Wuwenbin on 2018/7/19 at 22:03
- *
- * @author wuwenbin
  */
 @Slf4j
 @Component

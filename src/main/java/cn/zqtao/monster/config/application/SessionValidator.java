@@ -12,9 +12,6 @@ import java.util.Enumeration;
 
 /**
  * 定时任务验证用户登录有效期
- * created by Wuwenbin on 2018/2/7 at 22:40
- *
- * @author wuwenbin
  */
 @Slf4j
 @Component

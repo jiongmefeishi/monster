@@ -16,9 +16,6 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 拦截器更多的是为了处理Session和Cookie的一些逻辑
- * created by Wuwenbin on 2018/1/23 at 13:36
- *
- * @author wuwenbin
  */
 @Slf4j
 public class SessionInterceptor extends HandlerInterceptorAdapter {

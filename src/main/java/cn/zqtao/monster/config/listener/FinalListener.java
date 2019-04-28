@@ -6,10 +6,6 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-/**
- * created by Wuwenbin on 2018/8/3 at 23:15
- * @author wuwenbin
- */
 @Slf4j
 @Component
 @Order

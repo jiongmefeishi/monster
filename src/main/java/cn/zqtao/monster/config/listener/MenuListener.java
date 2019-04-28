@@ -26,11 +26,6 @@ import static cn.zqtao.monster.model.constant.NoteBlogV4.Init.INIT_STATUS;
 import static cn.zqtao.monster.model.entity.permission.NBSysMenu.MenuType.LEAF;
 import static cn.zqtao.monster.model.entity.permission.NBSysMenu.MenuType.PARENT;
 
-/**
- * created by Wuwenbin on 2018/8/1 at 20:25
- *
- * @author wuwenbin
- */
 @Component
 @Order(2)
 @Slf4j

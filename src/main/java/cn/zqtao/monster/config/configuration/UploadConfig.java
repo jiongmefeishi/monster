@@ -6,11 +6,6 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.servlet.MultipartConfigElement;
 
-/**
- * created by Wuwenbin on 2018/8/5 at 19:35
- *
- * @author wuwenbin
- */
 @Configuration
 public class UploadConfig {
 

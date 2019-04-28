@@ -25,9 +25,6 @@ import java.time.LocalDateTime;
 /**
  * 每个访问路径都需要做的一些操作
  * 譬如user的信息放入session
- * created by Wuwenbin on 2018/1/23 at 13:41
- *
- * @author wuwenbin
  */
 public class ApplicationInterceptor extends HandlerInterceptorAdapter {
 

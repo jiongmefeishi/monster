@@ -10,9 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 主题解析拦截器
- * created by Wuwenbin on 2018/9/9 at 上午9:38
- *
- * @author wuwenbin
  */
 public class ThemeHandlerInterceptor extends BaseController implements HandlerInterceptor {
 

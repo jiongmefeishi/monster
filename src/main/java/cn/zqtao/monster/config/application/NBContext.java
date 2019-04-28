@@ -15,9 +15,6 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * 全局的上下文对象
  * 用于操作session和cookie
- * created by Wuwenbin on 2018/7/16 at 12:25
- *
- * @author wuwenbin
  */
 @Component
 public class NBContext extends ConcurrentHashMap<String, NBSession> {
