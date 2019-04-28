@@ -11,9 +11,6 @@ import java.io.Serializable;
 /**
  * 首页面板对象
  * 方便用户定义面板的顺序以及面板的标题
- * created by Wuwenbin on 2018/7/19 at 下午2:43
- *
- * @author wuwenbin
  */
 @Data
 @Entity

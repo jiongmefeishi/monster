@@ -35,11 +35,6 @@ import java.util.regex.Pattern;
 import static java.util.regex.Pattern.*;
 import static org.springframework.util.StringUtils.isEmpty;
 
-/**
- * created by Wuwenbin on 2018/7/14 at 10:33
- *
- * @author wuwenbin
- */
 @Component
 @Slf4j
 public class NBUtils implements ApplicationContextAware {

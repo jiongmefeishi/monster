@@ -11,11 +11,6 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-/**
- * created by Wuwenbin on 2018/12/18 at 23:09
- *
- * @author wuwenbin
- */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

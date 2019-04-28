@@ -17,11 +17,6 @@ import javax.persistence.criteria.Predicate;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * created by Wuwenbin on 2018/9/7 at 9:43
- *
- * @author wuwenbin
- */
 @Service
 public class MessageServiceImpl implements MessageService {
 

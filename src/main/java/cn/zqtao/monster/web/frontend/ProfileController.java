@@ -7,11 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-/**
- * created by Wuwenbin on 2018/11/25 at 13:09
- *
- * @author wuwenbin
- */
 @Controller("frontProfileController")
 @RequestMapping("/profile")
 public class ProfileController extends BaseController {

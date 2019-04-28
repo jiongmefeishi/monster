@@ -16,10 +16,7 @@ import java.io.IOException;
 import java.util.function.Consumer;
 
 /**
- * created by Wuwenbin on 2018/7/17 at 10:33
  * 本地上传的实现类
- *
- * @author wuwenbin
  */
 @Slf4j
 @Service("localUpload")

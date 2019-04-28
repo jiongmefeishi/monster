@@ -12,11 +12,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-/**
- * created by Wuwenbin on 2018/9/7 at 9:35
- *
- * @author wuwenbin
- */
 @ControllerAdvice(basePackages = "cn.zqtao.monster.web.frontend")
 public class GlobalController {
 

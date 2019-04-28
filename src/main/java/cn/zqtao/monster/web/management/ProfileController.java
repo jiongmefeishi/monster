@@ -25,11 +25,6 @@ import static cn.zqtao.monster.config.permission.NBAuth.Group.ROUTER;
 import static cn.zqtao.monster.model.entity.permission.NBSysResource.ResType.NAV_LINK;
 import static cn.zqtao.monster.model.entity.permission.NBSysResource.ResType.OTHER;
 
-/**
- * created by Wuwenbin on 2018/12/16 at 13:15
- *
- * @author wuwenbin
- */
 @Controller
 @RequestMapping("/management/profile")
 public class ProfileController extends BaseController {

@@ -28,11 +28,6 @@ import java.util.List;
 
 import static cn.zqtao.monster.model.constant.NoteBlogV4.Param.ALL_COMMENT_OPEN;
 
-/**
- * created by Wuwenbin on 2018/2/8 at 18:54
- *
- * @author wuwenbin
- */
 @Controller
 @RequestMapping("/token/comment")
 public class CommentController extends BaseController {

@@ -11,8 +11,6 @@ import java.io.Serializable;
 
 /**
  * 文章分类表
- * created by Wuwenbin on 2018/7/15 at 11:49
- * @author wuwenbin
  */
 @Data
 @Entity

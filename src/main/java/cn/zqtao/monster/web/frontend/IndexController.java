@@ -27,11 +27,6 @@ import static java.util.stream.Collectors.toMap;
 import static cn.zqtao.monster.model.constant.NoteBlogV4.ParamValue.PAGE_MODERN_BUTTON;
 import static cn.zqtao.monster.model.constant.NoteBlogV4.ParamValue.PAGE_MODERN_DEFAULT;
 
-/**
- * created by Wuwenbin on 2018/7/31 at 21:33
- *
- * @author wuwenbin
- */
 @Controller
 public class IndexController extends BaseController {
 

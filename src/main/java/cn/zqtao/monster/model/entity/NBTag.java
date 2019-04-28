@@ -9,11 +9,6 @@ import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 
-/**
- * created by Wuwenbin on 2018/7/15 at 12:06
- *
- * @author wuwenbin
- */
 @Data
 @Entity
 @Table(name = "nb_tag", uniqueConstraints = @UniqueConstraint(columnNames = "name"))

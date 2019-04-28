@@ -15,11 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * created by Wuwenbin on 2019-01-08 at 01:24
- *
- * @author wuwenbin
- */
 @Transactional(rollbackOn = Exception.class)
 @Service
 public class DashboardServiceImpl implements DashboardService {

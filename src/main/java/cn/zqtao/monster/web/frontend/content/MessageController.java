@@ -37,11 +37,6 @@ import java.util.Map;
 
 import static cn.zqtao.monster.model.pojo.framework.NBR.error;
 
-/**
- * created by Wuwenbin on 2018/2/8 at 18:54
- *
- * @author wuwenbin
- */
 @Controller
 @RequestMapping
 public class MessageController extends BaseController {

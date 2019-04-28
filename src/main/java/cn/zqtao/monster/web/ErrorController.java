@@ -20,11 +20,6 @@ import java.util.Map;
 
 import static org.springframework.http.MediaType.*;
 
-/**
- * created by Wuwenbin on 2018/7/17 at 17:03
- *
- * @author wuwenbin
- */
 @Controller
 @RequestMapping("/error")
 public class ErrorController extends BaseController implements org.springframework.boot.web.servlet.error.ErrorController {

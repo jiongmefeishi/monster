@@ -28,9 +28,6 @@ import java.util.function.Consumer;
 
 /**
  * 七牛文件上传Service
- * created by Wuwenbin on 2018/7/17 at 14:46
- *
- * @author wuwenbin
  */
 @Slf4j
 @Service("qiniuUpload")

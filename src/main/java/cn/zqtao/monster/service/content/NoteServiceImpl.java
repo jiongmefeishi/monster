@@ -17,11 +17,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * created by Wuwenbin on 2018/8/18 at 10:34
- *
- * @author wuwenbin
- */
 @Service
 @Transactional(rollbackOn = Exception.class)
 public class NoteServiceImpl implements NoteService {

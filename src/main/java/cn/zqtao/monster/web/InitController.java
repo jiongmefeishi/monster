@@ -19,11 +19,6 @@ import java.util.List;
 
 import static cn.zqtao.monster.config.permission.NBAuth.Group;
 
-/**
- * created by Wuwenbin on 2018/7/16 at 14:10
- *
- * @author wuwenbin
- */
 @Controller
 public class InitController {
 

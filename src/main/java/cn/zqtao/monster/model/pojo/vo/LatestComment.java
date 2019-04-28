@@ -7,11 +7,6 @@ import cn.zqtao.monster.model.entity.NBComment;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-/**
- * created by Wuwenbin on 2019/1/7 at 14:11
- *
- * @author wuwenbin
- */
 @Data
 @Builder
 public class LatestComment implements Serializable {

@@ -13,11 +13,6 @@ import java.time.LocalDateTime;
 import static java.lang.Boolean.TRUE;
 import static java.time.LocalDateTime.now;
 
-/**
- * created by Wuwenbin on 2018/7/15 at 11:52
- *
- * @author wuwenbin
- */
 @Data
 @Entity
 @Table(name = "nb_comment")

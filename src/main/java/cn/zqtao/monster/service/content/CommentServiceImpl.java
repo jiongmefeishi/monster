@@ -18,11 +18,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * created by Wuwenbin on 2018/9/7 at 9:43
- *
- * @author wuwenbin
- */
 @Service
 public class CommentServiceImpl implements CommentService {
 

@@ -7,10 +7,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-/**
- * created by Wuwenbin on 2018/7/15 at 12:07
- * @author wuwenbin
- */
 @Data
 @Entity
 @Table(name = "nb_tag_refer")

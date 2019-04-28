@@ -26,11 +26,6 @@ import java.util.List;
 
 import static cn.zqtao.monster.config.permission.NBAuth.Group;
 
-/**
- * created by Wuwenbin on 2018/7/28 at 23:37
- *
- * @author wuwenbin
- */
 @Controller
 @RequestMapping("/management/users")
 public class UserController extends BaseController {

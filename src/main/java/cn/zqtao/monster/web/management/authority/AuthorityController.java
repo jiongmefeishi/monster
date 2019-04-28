@@ -28,11 +28,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.validation.Valid;
 import java.util.List;
 
-/**
- * created by Wuwenbin on 2018/7/23 at 10:50
- *
- * @author wuwenbin
- */
 @Controller
 @RequestMapping("/management")
 public class AuthorityController extends BaseController {

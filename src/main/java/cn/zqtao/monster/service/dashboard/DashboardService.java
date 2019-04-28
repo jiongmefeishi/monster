@@ -5,11 +5,6 @@ import cn.zqtao.monster.model.pojo.vo.LatestComment;
 
 import java.util.List;
 
-/**
- * created by Wuwenbin on 2019/1/7 at 14:03
- *
- * @author wuwenbin
- */
 public interface DashboardService {
 
     /**

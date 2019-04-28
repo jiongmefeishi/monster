@@ -17,9 +17,6 @@ import java.util.List;
 
 /**
  * FontAwesome工具类
- * created by Wuwenbin on 2018/7/19 at 17:10
- *
- * @author wuwenbin
  */
 public class FontAwesomeUtil {
 

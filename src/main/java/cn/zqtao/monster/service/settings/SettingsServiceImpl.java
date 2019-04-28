@@ -13,11 +13,6 @@ import java.util.Map;
 
 import static cn.zqtao.monster.model.constant.NoteBlogV4.Param.*;
 
-/**
- * created by Wuwenbin on 2018/8/13 at 15:09
- *
- * @author wuwenbin
- */
 @Service
 @Transactional(rollbackOn = Exception.class)
 public class SettingsServiceImpl implements SettingsService {

@@ -35,11 +35,6 @@ import static cn.hutool.core.util.RandomUtil.randomInt;
 import static java.time.LocalDateTime.now;
 import static java.util.stream.Collectors.toList;
 
-/**
- * created by Wuwenbin on 2018/8/5 at 20:09
- *
- * @author wuwenbin
- */
 @Slf4j
 @Service
 public class ArticleServiceImpl implements ArticleService {

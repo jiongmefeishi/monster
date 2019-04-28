@@ -7,10 +7,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * created by Wuwenbin on 2018/7/16 at 12:38
- * @author wuwenbin
- */
 public class CookieUtils {
 
     public static Cookie getCookie(HttpServletRequest request, String name) {

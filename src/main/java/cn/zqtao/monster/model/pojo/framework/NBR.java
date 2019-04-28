@@ -8,10 +8,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 网络传输对象
- * created by Wuwenbin on 2017/12/20 at 下午3:39
- *
- * @author wuwenbin
- * @since 1.10.5.RELEASE
  */
 public class NBR extends ConcurrentHashMap<String, Object> {
 

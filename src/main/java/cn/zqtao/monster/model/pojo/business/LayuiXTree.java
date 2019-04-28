@@ -9,9 +9,6 @@ import java.util.List;
 
 /**
  * layuiXtree树对象
- * created by Wuwenbin on 2018/7/23 at 16:55
- *
- * @author wuwenbin
  */
 @Data
 public class LayuiXTree implements Serializable {

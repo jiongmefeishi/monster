@@ -4,11 +4,6 @@ import cn.zqtao.monster.model.entity.permission.NBSysUser;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-/**
- * created by Wuwenbin on 2018/7/29 at 1:05
- *
- * @author wuwenbin
- */
 public interface UsersService {
 
     /**

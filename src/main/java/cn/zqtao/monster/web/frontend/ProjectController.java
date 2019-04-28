@@ -17,11 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-/**
- * created by Wuwenbin on 2018/12/15 at 11:30 AM
- *
- * @author wuwenbin
- */
 @Controller("frontProjectController")
 @RequestMapping("/project")
 public class ProjectController extends BaseController {

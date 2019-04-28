@@ -9,10 +9,6 @@ import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 
-/**
- * created by Wuwenbin on 2018/12/18 at 23:09
- * @author wuwenbin
- */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

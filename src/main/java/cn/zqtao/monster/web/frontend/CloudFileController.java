@@ -17,11 +17,6 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-/**
- * created by Wuwenbin on 2019/2/14 at 16:02
- *
- * @author wuwenbin
- */
 @Controller("frontCloudFileController")
 @RequestMapping("/file")
 public class CloudFileController extends BaseController {

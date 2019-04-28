@@ -5,11 +5,6 @@ import cn.zqtao.monster.model.pojo.bo.ArticleQueryBO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-/**
- * created by Wuwenbin on 2018/8/5 at 20:08
- *
- * @author wuwenbin
- */
 public interface ArticleService {
 
     /**

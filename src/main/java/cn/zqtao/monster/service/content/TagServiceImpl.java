@@ -13,11 +13,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * created by Wuwenbin on 2018/8/20 at 11:27
- *
- * @author wuwenbin
- */
 @Service
 @Transactional(rollbackOn = Exception.class)
 public class TagServiceImpl implements TagService {

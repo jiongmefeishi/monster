@@ -6,11 +6,6 @@ import cn.zqtao.monster.model.pojo.vo.NBTagVO;
 import java.util.List;
 import java.util.Map;
 
-/**
- * created by Wuwenbin on 2018/8/20 at 11:24
- *
- * @author wuwenbin
- */
 public interface TagService {
 
     /**

@@ -9,9 +9,6 @@ import java.util.Date;
 
 /**
  * 文章id生成策略
- * created by Wuwenbin on 2018/7/15 at 11:00
- *
- * @author wuwenbin
  */
 public class NBArticleStrategy implements IdentifierGenerator {
 

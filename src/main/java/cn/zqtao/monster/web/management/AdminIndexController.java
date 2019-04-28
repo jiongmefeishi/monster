@@ -18,11 +18,6 @@ import java.util.Objects;
 
 import static cn.zqtao.monster.config.permission.NBAuth.Group;
 
-/**
- * created by Wuwenbin on 2018/7/21 at 23:31
- *
- * @author wuwenbin
- */
 @Controller
 @RequestMapping("/management")
 public class AdminIndexController {

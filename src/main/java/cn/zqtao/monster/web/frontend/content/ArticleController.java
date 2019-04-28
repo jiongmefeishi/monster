@@ -20,11 +20,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
-/**
- * created by Wuwenbin on 2018/9/5 at 下午12:34
- *
- * @author wuwenbin
- */
 @Controller("frontArticleController")
 @RequestMapping({"/article", "/a"})
 public class ArticleController extends BaseController {

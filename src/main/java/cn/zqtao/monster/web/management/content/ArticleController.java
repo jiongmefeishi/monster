@@ -32,11 +32,6 @@ import static cn.zqtao.monster.model.constant.NoteBlogV4.Session.SESSION_ID_COOK
 import static cn.zqtao.monster.model.entity.permission.NBSysResource.ResType.NAV_LINK;
 import static cn.zqtao.monster.model.entity.permission.NBSysResource.ResType.OTHER;
 
-/**
- * created by Wuwenbin on 2018/8/2 at 21:24
- *
- * @author wuwenbin
- */
 @Controller
 @RequestMapping("/management")
 public class ArticleController extends BaseController {

@@ -16,11 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
 
-/**
- * created by Wuwenbin on 2018/7/20 at 14:49
- *
- * @author wuwenbin
- */
 @Service
 @Transactional(rollbackOn = Exception.class)
 public class AuthorityServiceImpl implements AuthorityService {

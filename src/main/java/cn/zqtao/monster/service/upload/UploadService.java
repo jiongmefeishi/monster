@@ -19,9 +19,6 @@ import java.util.function.Consumer;
 
 /**
  * 上传方法
- * created by Wuwenbin on 2018/7/17 at 10:29
- *
- * @author wuwenbin
  */
 public interface UploadService<T> {
 

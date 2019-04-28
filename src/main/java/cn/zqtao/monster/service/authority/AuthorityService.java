@@ -4,11 +4,6 @@ import cn.zqtao.monster.model.pojo.business.LayuiXTree;
 
 import java.util.List;
 
-/**
- * created by Wuwenbin on 2018/7/20 at 14:48
- *
- * @author wuwenbin
- */
 public interface AuthorityService {
 
 

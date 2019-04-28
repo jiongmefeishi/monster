@@ -27,11 +27,6 @@ import java.util.function.Supplier;
 import static cn.zqtao.monster.model.constant.NoteBlogV4.ParamValue.STYLE_NORMAL;
 import static cn.zqtao.monster.model.constant.NoteBlogV4.ParamValue.STYLE_SIMPLE;
 
-/**
- * created by Wuwenbin on 2018/7/17 at 17:09
- *
- * @author wuwenbin
- */
 @Slf4j
 public abstract class BaseController {
 

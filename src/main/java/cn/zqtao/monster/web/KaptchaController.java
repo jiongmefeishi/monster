@@ -16,10 +16,6 @@ import javax.servlet.http.HttpSession;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-/**
- * created by Wuwenbin on 2018/7/31 at 20:43
- * @author wuwenbin
- */
 @Controller
 @Slf4j
 public class KaptchaController {

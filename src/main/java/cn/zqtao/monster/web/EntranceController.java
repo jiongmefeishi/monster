@@ -30,11 +30,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import static cn.zqtao.monster.model.constant.NoteBlogV4.Session.SESSION_ID_COOKIE;
 
-/**
- * created by Wuwenbin on 2018/7/19 at 20:54
- *
- * @author wuwenbin
- */
 @Controller
 public class EntranceController extends BaseController {
 

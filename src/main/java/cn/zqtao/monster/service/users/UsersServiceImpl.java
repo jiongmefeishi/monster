@@ -16,11 +16,6 @@ import org.springframework.util.StringUtils;
 
 import javax.transaction.Transactional;
 
-/**
- * created by Wuwenbin on 2018/7/29 at 1:06
- *
- * @author wuwenbin
- */
 @Service
 @Transactional(rollbackOn = Exception.class)
 public class UsersServiceImpl implements UsersService {

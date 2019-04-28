@@ -5,9 +5,6 @@ import java.util.List;
 
 /**
  * layui2.x版本推出的dataTable插件,与LayTable的区别在于msg字段。推荐使用此类
- * created by Wuwenbin on 2017/8/30 at 11:41
- *
- * @author wuwenbin
  */
 public class LayuiTable<T> implements Serializable {
 

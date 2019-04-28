@@ -22,11 +22,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * created by Wuwenbin on 2018/2/9 at 14:14
- *
- * @author wuwenbin
- */
 @Slf4j
 @Controller("frontNoteController")
 @RequestMapping("/note")

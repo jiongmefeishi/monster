@@ -4,9 +4,6 @@ import java.util.Map;
 
 /**
  * 参数查询Service
- * created by Wuwenbin on 2018/7/17 at 15:51
- *
- * @author wuwenbin
  */
 public interface ParamService {
 

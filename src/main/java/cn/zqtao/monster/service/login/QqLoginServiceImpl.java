@@ -19,10 +19,6 @@ import java.util.Map;
 import static cn.zqtao.monster.model.pojo.framework.NBR.error;
 import static cn.zqtao.monster.model.pojo.framework.NBR.ok;
 
-/**
- * created by Wuwenbin on 2018/1/23 at 12:33
- * @author wuwenbin
- */
 @Slf4j
 @Service
 public class QqLoginServiceImpl implements LoginService<QqLoginModel> {

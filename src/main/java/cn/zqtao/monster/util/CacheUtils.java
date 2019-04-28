@@ -5,9 +5,6 @@ import org.springframework.cache.CacheManager;
 
 /**
  * 本项目使用的是springboot默认的ConcurrentMapCacheManager
- * created by Wuwenbin on 2018/8/16 at 11:33
- *
- * @author wuwenbin
  */
 public class CacheUtils {
 

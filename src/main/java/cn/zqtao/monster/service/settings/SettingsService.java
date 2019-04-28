@@ -11,11 +11,6 @@ import org.springframework.util.StringUtils;
 import java.util.Map;
 import java.util.function.Supplier;
 
-/**
- * created by Wuwenbin on 2018/8/13 at 15:08
- *
- * @author wuwenbin
- */
 public interface SettingsService {
 
     /**

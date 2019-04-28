@@ -2,10 +2,6 @@ package cn.zqtao.monster.service.mail;
 
 import cn.zqtao.monster.model.entity.NBArticle;
 
-/**
- * created by Wuwenbin on 2019-01-08 at 22:27
- * @author wuwenbin
- */
 public interface MailService {
 
     /**

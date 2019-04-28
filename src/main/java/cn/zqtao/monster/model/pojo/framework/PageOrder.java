@@ -5,10 +5,6 @@ import org.springframework.util.StringUtils;
 
 /**
  * 分页排序对象
- * Created by wuwenbin on 2014/11/1
- *
- * @author wuwenbin
- * @since 1.0.0
  */
 public class PageOrder {
 

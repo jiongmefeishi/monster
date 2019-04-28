@@ -5,11 +5,6 @@ import lombok.Data;
 
 import java.io.Serializable;
 
-/**
- * created by Wuwenbin on 2019/1/7 at 13:59
- *
- * @author wuwenbin
- */
 @Data
 @Builder
 public class BaseDataStatistics implements Serializable {

@@ -4,11 +4,6 @@ import cn.zqtao.monster.model.entity.NBNote;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-/**
- * created by Wuwenbin on 2018/8/18 at 10:32
- *
- * @author wuwenbin
- */
 public interface NoteService {
 
     /**

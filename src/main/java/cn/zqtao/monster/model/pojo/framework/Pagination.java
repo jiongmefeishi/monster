@@ -6,10 +6,6 @@ import java.util.List;
 
 /**
  * 分页对象
- * Created by wuwenbin on 2015/9/15.
- *
- * @author wuwenbin
- * @since 1.0.0
  */
 public class Pagination<T> extends PageOrder implements Serializable {
 
