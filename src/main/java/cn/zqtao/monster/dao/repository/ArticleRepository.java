@@ -10,11 +10,6 @@ import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * created by Wuwenbin on 2018/7/15 at 12:52
- *
- * @author wuwenbin
- */
 public interface ArticleRepository extends JpaRepository<NBArticle, Long>, JpaSpecificationExecutor<NBArticle> {
 
     /**

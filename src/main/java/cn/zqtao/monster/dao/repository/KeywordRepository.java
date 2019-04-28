@@ -7,11 +7,6 @@ import org.springframework.data.jpa.repository.Query;
 
 import javax.transaction.Transactional;
 
-/**
- * created by Wuwenbin on 2018/8/17 at 11:48
- *
- * @author wuwenbin
- */
 public interface KeywordRepository extends JpaRepository<NBKeyword, Long> {
 
     /**

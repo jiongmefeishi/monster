@@ -1,13 +1,10 @@
 package cn.zqtao.monster.config.permission;
 
-import org.springframework.core.annotation.AliasFor;
-
 import java.lang.annotation.*;
 
 /**
  * 基于注解的权限简单验证
  * 此处为权限注解
- * created by Wuwenbin on 2018/7/18 at 15:37
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)

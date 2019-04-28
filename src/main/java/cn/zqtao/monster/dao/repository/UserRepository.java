@@ -7,11 +7,6 @@ import org.springframework.data.jpa.repository.Query;
 
 import javax.transaction.Transactional;
 
-/**
- * created by Wuwenbin on 2018/7/18 at 17:34
- *
- * @author wuwenbin
- */
 public interface UserRepository extends JpaRepository<NBSysUser, Long> {
 
 

@@ -8,11 +8,6 @@ import org.springframework.data.jpa.repository.Query;
 
 import javax.transaction.Transactional;
 
-/**
- * created by Wuwenbin on 2018/12/25 at 17:12
- *
- * @author wuwenbin
- */
 public interface MessageRepository extends JpaRepository<NBMessage, Long>, JpaSpecificationExecutor<NBMessage> {
 
     /**

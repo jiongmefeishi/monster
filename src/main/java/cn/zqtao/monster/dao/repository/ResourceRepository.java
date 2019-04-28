@@ -8,11 +8,6 @@ import org.springframework.data.jpa.repository.Query;
 import javax.transaction.Transactional;
 import java.util.List;
 
-/**
- * created by Wuwenbin on 2018/7/19 at 22:54
- *
- * @author wuwenbin
- */
 @Transactional(rollbackOn = Exception.class)
 public interface ResourceRepository extends JpaRepository<NBSysResource, Long> {
 

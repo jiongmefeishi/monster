@@ -10,11 +10,6 @@ import org.springframework.data.jpa.repository.Query;
 import javax.transaction.Transactional;
 import java.util.List;
 
-/**
- * created by Wuwenbin on 2018/7/24 at 22:11
- *
- * @author wuwenbin
- */
 public interface MenuRepository extends JpaRepository<NBSysMenu, Long> {
 
     /**

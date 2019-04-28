@@ -17,10 +17,6 @@ import org.springframework.util.StringUtils;
 import java.io.File;
 
 
-/**
- * created by Wuwenbin on 2018/8/3 at 22:46
- * @author wuwenbin
- */
 @Slf4j
 @Component
 @Order(3)

@@ -30,9 +30,6 @@ import java.util.stream.Collectors;
 
 /**
  * 通过{@code @NBAuth}注解来验证权限
- * created by Wuwenbin on 2018/7/18 at 15:50
- *
- * @author wuwenbin
  */
 @Slf4j
 @Aspect

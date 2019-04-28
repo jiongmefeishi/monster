@@ -1,9 +1,5 @@
 package cn.zqtao.monster.exception;
 
-/**
- * created by Wuwenbin on 2018/8/3 at 22:16
- * @author wuwenbin
- */
 public class MethodNotMatchException extends RuntimeException {
     public MethodNotMatchException() {
         super();

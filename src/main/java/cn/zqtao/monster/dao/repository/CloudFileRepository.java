@@ -3,11 +3,6 @@ package cn.zqtao.monster.dao.repository;
 import cn.zqtao.monster.model.entity.NBCloudFile;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-/**
- * created by Wuwenbin on 2019/2/13 at 16:33
- *
- * @author wuwenbin
- */
 public interface CloudFileRepository extends JpaRepository<NBCloudFile, Long> {
 
     /**

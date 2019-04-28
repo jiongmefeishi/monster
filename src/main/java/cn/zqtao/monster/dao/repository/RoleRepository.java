@@ -6,11 +6,6 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-/**
- * created by Wuwenbin on 2018/7/16 at 14:31
- *
- * @author wuwenbin
- */
 public interface RoleRepository extends JpaRepository<NBSysRole, Long> {
 
     /**

@@ -8,11 +8,6 @@ import org.springframework.data.repository.query.Param;
 
 import javax.transaction.Transactional;
 
-/**
- * created by Wuwenbin on 2018/12/22 at 19:12
- *
- * @author wuwenbin
- */
 public interface ProjectRepository extends JpaRepository<NBProject, Long> {
 
     /**

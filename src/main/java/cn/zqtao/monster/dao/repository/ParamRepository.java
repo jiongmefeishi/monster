@@ -9,11 +9,6 @@ import org.springframework.data.repository.query.Param;
 import javax.transaction.Transactional;
 import java.util.List;
 
-/**
- * created by Wuwenbin on 2018/7/15 at 17:24
- *
- * @author wuwenbin
- */
 @Transactional(rollbackOn = Exception.class)
 public interface ParamRepository extends JpaRepository<NBParam, Long> {
 

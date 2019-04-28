@@ -5,11 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-/**
- * created by Wuwenbin on 2018/8/3 at 11:16
- *
- * @author wuwenbin
- */
 public interface ProjectCateRepository extends JpaRepository<NBProjectCate, Long> {
 
     /**

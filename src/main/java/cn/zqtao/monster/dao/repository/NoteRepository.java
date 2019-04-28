@@ -7,11 +7,6 @@ import org.springframework.data.jpa.repository.Query;
 
 import javax.transaction.Transactional;
 
-/**
- * created by Wuwenbin on 2018/8/18 at 11:10
- *
- * @author wuwenbin
- */
 public interface NoteRepository extends JpaRepository<NBNote, Long> {
 
     /**

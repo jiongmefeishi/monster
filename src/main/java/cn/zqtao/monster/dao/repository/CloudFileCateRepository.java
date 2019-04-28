@@ -5,11 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-/**
- * created by Wuwenbin on 2019/2/13 at 16:34
- *
- * @author wuwenbin
- */
 public interface CloudFileCateRepository extends JpaRepository<NBCloudFileCate, Long> {
 
     /**

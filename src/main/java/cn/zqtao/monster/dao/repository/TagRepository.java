@@ -6,11 +6,6 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-/**
- * created by Wuwenbin on 2018/8/8 at 16:46
- *
- * @author wuwenbin
- */
 public interface TagRepository extends JpaRepository<NBTag, Long> {
 
     /**
