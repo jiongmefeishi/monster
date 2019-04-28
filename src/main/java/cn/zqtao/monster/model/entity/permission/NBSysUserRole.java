@@ -9,11 +9,6 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.io.Serializable;
 
-/**
- * created by Wuwenbin on 2018/7/18 at 14:04
- *
- * @author wuwenbin
- */
 @Data
 @Builder
 @AllArgsConstructor

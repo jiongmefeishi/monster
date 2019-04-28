@@ -10,11 +10,6 @@ import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 
-/**
- * created by Wuwenbin on 2018/7/15 at 12:04
- *
- * @author wuwenbin
- */
 @Data
 @Entity
 @Table(name = "sys_role")

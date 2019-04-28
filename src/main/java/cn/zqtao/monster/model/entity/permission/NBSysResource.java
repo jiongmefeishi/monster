@@ -8,11 +8,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 
-/**
- * created by Wuwenbin on 2018/7/18 at 14:01
- *
- * @author wuwenbin
- */
 @Entity
 @Table(name = "sys_resource")
 @Data

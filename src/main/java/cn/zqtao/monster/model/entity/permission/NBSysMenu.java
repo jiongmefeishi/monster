@@ -11,11 +11,6 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
-/**
- * created by Wuwenbin on 2018/7/20 at 21:23
- *
- * @author wuwenbin
- */
 @Entity
 @Data
 @Table(name = "sys_menu")

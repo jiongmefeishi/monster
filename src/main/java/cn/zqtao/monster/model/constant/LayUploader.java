@@ -8,9 +8,6 @@ import java.util.Map;
 
 /**
  * layui上传组件返回的json实体类
- * created by Wuwenbin on 2018/7/17 at 14:55
- *
- * @author wuwenbin
  */
 @Data
 public class LayUploader implements Serializable {

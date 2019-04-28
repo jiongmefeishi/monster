@@ -2,9 +2,6 @@ package cn.zqtao.monster.model.constant;
 
 /**
  * 一些全局的固定值
- * created by Wuwenbin on 2018/7/15 at 17:29
- *
- * @author wuwenbin
  */
 public interface NoteBlogV4 {
 

@@ -2,8 +2,6 @@ package cn.zqtao.monster.model.constant;
 
 /**
  * 区分文章还是笔记
- * created by Wuwenbin on 2018/7/17 at 10:51
- * @author wuwenbin
  */
 public enum TagType {
 

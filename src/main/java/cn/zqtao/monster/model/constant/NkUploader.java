@@ -6,10 +6,6 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * created by Wuwenbin on 2018/8/4 at 10:28
- * @author wuwenbin
- */
 @Data
 public class NkUploader implements Serializable {
 

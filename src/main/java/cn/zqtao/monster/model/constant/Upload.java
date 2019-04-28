@@ -4,9 +4,6 @@ import cn.zqtao.monster.exception.MethodNotMatchException;
 
 /**
  * 上传相关的常量
- * created by Wuwenbin on 2018/7/16 at 15:26
- *
- * @author wuwenbin
  */
 public interface Upload {
 
