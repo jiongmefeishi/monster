@@ -7,18 +7,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-/**
- * 欢迎加入我们，QQ群：697053454
- * @author wuwenbin
- */
 @SpringBootApplication
 @EnableTransactionManagement
 @MapperScan(basePackages = "cn.zqtao.monster.dao.mapper", annotationClass = MybatisDao.class)
 @EnableCaching
-public class NoteBlogV4Application {
+public class MonsterApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(NoteBlogV4Application.class, args);
+        SpringApplication.run(MonsterApplication.class, args);
     }
 
 }
