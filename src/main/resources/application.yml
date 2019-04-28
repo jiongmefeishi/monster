@@ -6,7 +6,7 @@ spring:
   profiles:
     active: dev
   application:
-    name: NoteBlogV4
+    name: Monster
   #资源配置
   thymeleaf:
     cache: false
