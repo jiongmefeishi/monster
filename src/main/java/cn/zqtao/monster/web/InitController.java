@@ -2,7 +2,7 @@ package cn.zqtao.monster.web;
 
 import cn.zqtao.monster.config.permission.NBAuth;
 import cn.zqtao.monster.dao.repository.ParamRepository;
-import cn.zqtao.monster.model.constant.NoteBlogV4;
+import cn.zqtao.monster.model.constant.Monster;
 import cn.zqtao.monster.model.entity.permission.NBSysResource.ResType;
 import cn.zqtao.monster.model.pojo.framework.NBR;
 import cn.zqtao.monster.service.authority.AuthorityService;
@@ -36,8 +36,8 @@ public class InitController {
     @RequestMapping("/init")
     public String init() {
         boolean initialization =
-                paramService.getValueByName(NoteBlogV4.Param.INIT_STATUS)
-                        .equals(NoteBlogV4.Init.INIT_NOT);
+                paramService.getValueByName(Monster.Param.INIT_STATUS)
+                        .equals(Monster.Init.INIT_NOT);
         return initialization ? "init" : "redirect:/";
     }
 
@@ -46,7 +46,7 @@ public class InitController {
     public NBR initSubmit(HttpServletRequest request, String username, String password, String email) {
         paramService.saveInitParam(request.getParameterMap());
         authorityService.initMasterAccount(username, password, email);
-        paramRepository.updateValueByName(NoteBlogV4.Param.MAIL_SERVER_ACCOUNT, email);
+        paramRepository.updateValueByName(Monster.Param.MAIL_SERVER_ACCOUNT, email);
         paramRepository.updateInitParam("1", "init_status");
         return NBR.ok("初始化设置成功！");
     }

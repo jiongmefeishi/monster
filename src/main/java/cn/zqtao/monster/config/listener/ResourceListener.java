@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import cn.zqtao.monster.config.application.NBContext;
 import cn.zqtao.monster.config.permission.NBAuth;
 import cn.zqtao.monster.dao.repository.ParamRepository;
-import cn.zqtao.monster.model.constant.NoteBlogV4;
+import cn.zqtao.monster.model.constant.Monster;
 import cn.zqtao.monster.model.entity.NBParam;
 import cn.zqtao.monster.model.entity.permission.NBSysResource;
 import org.springframework.aop.framework.AopProxyUtils;
@@ -25,8 +25,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import static cn.zqtao.monster.model.constant.NoteBlogV4.Init.INIT_NOT;
-import static cn.zqtao.monster.model.constant.NoteBlogV4.Init.INIT_STATUS;
+import static cn.zqtao.monster.model.constant.Monster.Init.INIT_NOT;
+import static cn.zqtao.monster.model.constant.Monster.Init.INIT_STATUS;
 
 /**
  * 资源监听器
@@ -61,7 +61,7 @@ public class ResourceListener implements ApplicationListener<ContextRefreshedEve
             log.info("「怪兽营」App 正在启动中，请稍后...");
             List<Map<String, Object>> resources = new ArrayList<>(50);
             //以防万一，先移除以前的资源
-            context.removeApplicationObj(NoteBlogV4.Init.MASTER_RESOURCES);
+            context.removeApplicationObj(Monster.Init.MASTER_RESOURCES);
             Map<String, Object> beans = event.getApplicationContext().getBeansWithAnnotation(Controller.class);
             beans.putAll(event.getApplicationContext().getBeansWithAnnotation(RestController.class));
             int cnt = 0;
@@ -104,7 +104,7 @@ public class ResourceListener implements ApplicationListener<ContextRefreshedEve
                 }
             }
             log.info("扫描资源完毕，共计处理资源数目：[{}]，等待下一步插入数据库赋给网站管理员角色..", cnt);
-            context.setApplicationObj(NoteBlogV4.Init.MASTER_RESOURCES, resources);
+            context.setApplicationObj(Monster.Init.MASTER_RESOURCES, resources);
 
         }
 

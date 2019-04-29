@@ -6,7 +6,7 @@ import cn.hutool.core.date.DateUnit;
 import cn.zqtao.monster.config.application.NBContext;
 import cn.zqtao.monster.config.application.NBSession;
 import cn.zqtao.monster.dao.repository.LoggerRepository;
-import cn.zqtao.monster.model.constant.NoteBlogV4;
+import cn.zqtao.monster.model.constant.Monster;
 import cn.zqtao.monster.model.entity.NBLogger;
 import cn.zqtao.monster.model.entity.permission.NBSysUser;
 import cn.zqtao.monster.model.pojo.business.IpInfo;
@@ -48,20 +48,20 @@ public class ApplicationInterceptor extends HandlerInterceptorAdapter {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String init = "/init", initSubmit = "/init/submit";
-        boolean initialize = paramService.getValueByName(NoteBlogV4.Init.INIT_STATUS).equals(NoteBlogV4.Init.INIT_SURE);
+        boolean initialize = paramService.getValueByName(Monster.Init.INIT_STATUS).equals(Monster.Init.INIT_SURE);
         boolean initPage = init.equals(request.getRequestURI()) || initSubmit.equals(request.getRequestURI());
         if (initialize) {
             if (!initPage) {
                 return true;
             } else {
-                response.sendRedirect(NoteBlogV4.Session.FRONTEND_INDEX);
+                response.sendRedirect(Monster.Session.FRONTEND_INDEX);
                 return false;
             }
         } else {
             if (initPage) {
                 return true;
             } else {
-                response.sendRedirect(NoteBlogV4.Session.INIT_PAGE);
+                response.sendRedirect(Monster.Session.INIT_PAGE);
                 return false;
             }
         }
@@ -75,7 +75,7 @@ public class ApplicationInterceptor extends HandlerInterceptorAdapter {
             blogContext.setApplicationObj("ipCacheBean", ipInfoCache);
         }
         String sessionId = "", username = "";
-        Cookie cookie = CookieUtils.getCookie(request, NoteBlogV4.Session.SESSION_ID_COOKIE);
+        Cookie cookie = CookieUtils.getCookie(request, Monster.Session.SESSION_ID_COOKIE);
         if (cookie != null) {
             sessionId = cookie.getValue();
             NBSession blogSession = blogContext.get(sessionId);

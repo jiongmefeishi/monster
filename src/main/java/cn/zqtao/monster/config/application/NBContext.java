@@ -1,6 +1,6 @@
 package cn.zqtao.monster.config.application;
 
-import cn.zqtao.monster.model.constant.NoteBlogV4;
+import cn.zqtao.monster.model.constant.Monster;
 import cn.zqtao.monster.model.entity.permission.NBSysUser;
 import cn.zqtao.monster.util.CookieUtils;
 import cn.zqtao.monster.util.NBUtils;
@@ -27,11 +27,11 @@ public class NBContext extends ConcurrentHashMap<String, NBSession> {
                 .expired(false)
                 .host(NBUtils.getRemoteAddress(request))
                 .build();
-        Cookie cookie = CookieUtils.getCookie(request, NoteBlogV4.Session.SESSION_ID_COOKIE);
+        Cookie cookie = CookieUtils.getCookie(request, Monster.Session.SESSION_ID_COOKIE);
         if (cookie != null) {
             session.setId(cookie.getValue());
         }
-        CookieUtils.setCookie(response, NoteBlogV4.Session.SESSION_ID_COOKIE, session.getId(), -1);
+        CookieUtils.setCookie(response, Monster.Session.SESSION_ID_COOKIE, session.getId(), -1);
         put(session.getId(), session);
     }
 

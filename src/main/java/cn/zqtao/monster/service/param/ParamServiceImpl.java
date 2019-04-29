@@ -11,7 +11,7 @@ import org.springframework.util.StringUtils;
 import javax.transaction.Transactional;
 import java.util.Map;
 
-import static cn.zqtao.monster.model.constant.NoteBlogV4.Param.STATISTIC_ANALYSIS;
+import static cn.zqtao.monster.model.constant.Monster.Param.STATISTIC_ANALYSIS;
 
 @Service
 @Transactional(rollbackOn = Exception.class)

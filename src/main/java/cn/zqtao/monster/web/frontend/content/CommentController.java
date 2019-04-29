@@ -26,7 +26,7 @@ import javax.validation.Valid;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import static cn.zqtao.monster.model.constant.NoteBlogV4.Param.ALL_COMMENT_OPEN;
+import static cn.zqtao.monster.model.constant.Monster.Param.ALL_COMMENT_OPEN;
 
 @Controller
 @RequestMapping("/token/comment")

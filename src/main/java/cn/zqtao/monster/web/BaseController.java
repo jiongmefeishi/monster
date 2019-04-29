@@ -3,7 +3,7 @@ package cn.zqtao.monster.web;
 import com.github.pagehelper.Page;
 import lombok.extern.slf4j.Slf4j;
 import cn.zqtao.monster.dao.repository.ParamRepository;
-import cn.zqtao.monster.model.constant.NoteBlogV4;
+import cn.zqtao.monster.model.constant.Monster;
 import cn.zqtao.monster.model.pojo.framework.LayuiTable;
 import cn.zqtao.monster.model.pojo.framework.NBR;
 import cn.zqtao.monster.model.pojo.framework.Pagination;
@@ -24,8 +24,8 @@ import java.util.Map;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-import static cn.zqtao.monster.model.constant.NoteBlogV4.ParamValue.STYLE_NORMAL;
-import static cn.zqtao.monster.model.constant.NoteBlogV4.ParamValue.STYLE_SIMPLE;
+import static cn.zqtao.monster.model.constant.Monster.ParamValue.STYLE_NORMAL;
+import static cn.zqtao.monster.model.constant.Monster.ParamValue.STYLE_SIMPLE;
 
 @Slf4j
 public abstract class BaseController {
@@ -44,10 +44,10 @@ public abstract class BaseController {
     }
 
     protected static String handleStyle(String simple, Supplier<String> normalOrOther, ParamRepository paramRepository) {
-        String style = CacheUtils.getParamCache().get(NoteBlogV4.Param.BLOG_STYLE, String.class);
+        String style = CacheUtils.getParamCache().get(Monster.Param.BLOG_STYLE, String.class);
         if (StringUtils.isEmpty(style)) {
-            style = paramRepository.findByName(NoteBlogV4.Param.BLOG_STYLE).getValue();
-            CacheUtils.getParamCache().put(NoteBlogV4.Param.BLOG_STYLE, style);
+            style = paramRepository.findByName(Monster.Param.BLOG_STYLE).getValue();
+            CacheUtils.getParamCache().put(Monster.Param.BLOG_STYLE, style);
         }
         if (StringUtils.isEmpty(style)) {
             throw new RuntimeException("页面风格未设定！");

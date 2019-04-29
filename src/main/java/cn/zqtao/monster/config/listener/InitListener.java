@@ -4,7 +4,7 @@ import cn.hutool.core.util.StrUtil;
 import lombok.extern.slf4j.Slf4j;
 import cn.zqtao.monster.config.application.NBContext;
 import cn.zqtao.monster.dao.repository.*;
-import cn.zqtao.monster.model.constant.NoteBlogV4;
+import cn.zqtao.monster.model.constant.Monster;
 import cn.zqtao.monster.model.entity.NBPanel;
 import cn.zqtao.monster.model.entity.NBParam;
 import cn.zqtao.monster.model.entity.permission.NBSysMenu;
@@ -25,9 +25,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-import static cn.zqtao.monster.model.constant.NoteBlogV4.Init.INIT_STATUS;
-import static cn.zqtao.monster.model.constant.NoteBlogV4.Init.*;
-import static cn.zqtao.monster.model.constant.NoteBlogV4.Param.*;
+import static cn.zqtao.monster.model.constant.Monster.Init.INIT_STATUS;
+import static cn.zqtao.monster.model.constant.Monster.Init.*;
+import static cn.zqtao.monster.model.constant.Monster.Param.*;
 
 /**
  * spring boot 容器启动完成之后
@@ -74,7 +74,7 @@ public class InitListener implements ApplicationListener<ApplicationReadyEvent> 
         } else {
             //已经包含初始化后的角色信息，查出角色名为ROLE_MASTER的对象，没有就抛出异常
             Optional<NBSysRole> role = roleRepository.findOne(Example.of(NBSysRole.builder().name("ROLE_MASTER").build()));
-            context.setApplicationObj(NoteBlogV4.Session.WEBMASTER_ROLE_ID,
+            context.setApplicationObj(Monster.Session.WEBMASTER_ROLE_ID,
                     role.orElseThrow(() -> new RuntimeException("未找到角色「ROLE_MASTER」")).getId());
             setUpAuthority(true);
         }
@@ -111,13 +111,13 @@ public class InitListener implements ApplicationListener<ApplicationReadyEvent> 
             //插入管理员角色信息
             NBSysRole webmasterRole = NBSysRole.builder().name("ROLE_MASTER").cnName("网站管理员").build();
             webmaster = roleRepository.saveAndFlush(webmasterRole);
-            context.setApplicationObj(NoteBlogV4.Session.WEBMASTER_ROLE_ID, webmaster.getId());
+            context.setApplicationObj(Monster.Session.WEBMASTER_ROLE_ID, webmaster.getId());
         } else {
-            long webmasterRoleId = context.getApplicationObj(NoteBlogV4.Session.WEBMASTER_ROLE_ID);
+            long webmasterRoleId = context.getApplicationObj(Monster.Session.WEBMASTER_ROLE_ID);
             webmaster = roleRepository.getOne(webmasterRoleId);
         }
         //获取扫描到的所有需要验证权限的资源
-        List<Map<String, Object>> authResources = context.getApplicationObj(NoteBlogV4.Init.MASTER_RESOURCES);
+        List<Map<String, Object>> authResources = context.getApplicationObj(Monster.Init.MASTER_RESOURCES);
         if (authResources != null) {
             authResources.forEach(res -> {
                 String url = res.get("url").toString();
@@ -227,7 +227,7 @@ public class InitListener implements ApplicationListener<ApplicationReadyEvent> 
                 {QINIU_SECRET_KEY, StrUtil.EMPTY, "七牛云SecretKey", "9"},
                 {QINIU_BUCKET, StrUtil.EMPTY, "七牛云bucket", "9"},
                 {PAGE_MODERN, INIT_DEFAULT_PAGE_MODERN, "首页博文分页模式0：流式，1：按钮加载", "10"},
-                {BLOG_STYLE, NoteBlogV4.ParamValue.STYLE_NORMAL, "首页样式，简约/普通（simple/normal）", "10"},
+                {BLOG_STYLE, Monster.ParamValue.STYLE_NORMAL, "首页样式，简约/普通（simple/normal）", "10"},
                 {BLOG_INDEX_PAGE_SIZE, INIT_DEFAULT_PAGE_SIZE, "博客首页文章页面数据量大小，大于10才有效,否则则根据参数来判断", "-1"},
                 {STATISTIC_ANALYSIS, INIT_NOT, "是否开启访问统计，默认不开启", "10"},
                 {ARTICLE_SUMMARY_WORDS_LENGTH, "243", "首页展示文章的摘要的文字数量，默认243", "10"}

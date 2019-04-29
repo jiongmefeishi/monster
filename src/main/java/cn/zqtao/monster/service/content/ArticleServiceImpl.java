@@ -8,7 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import cn.zqtao.monster.dao.repository.ArticleRepository;
 import cn.zqtao.monster.dao.repository.TagReferRepository;
 import cn.zqtao.monster.dao.repository.TagRepository;
-import cn.zqtao.monster.model.constant.NoteBlogV4;
+import cn.zqtao.monster.model.constant.Monster;
 import cn.zqtao.monster.model.constant.TagType;
 import cn.zqtao.monster.model.entity.NBArticle;
 import cn.zqtao.monster.model.entity.NBCate;
@@ -170,7 +170,7 @@ public class ArticleServiceImpl implements ArticleService {
      */
     private static void setArticleSummaryAndTxt(NBArticle article) {
         ParamService paramService = NBUtils.getBean(ParamService.class);
-        int summaryLength = Integer.valueOf(paramService.getValueByName(NoteBlogV4.Param.ARTICLE_SUMMARY_WORDS_LENGTH));
+        int summaryLength = Integer.valueOf(paramService.getValueByName(Monster.Param.ARTICLE_SUMMARY_WORDS_LENGTH));
         String clearContent = HtmlUtil.cleanHtmlTag(StrUtil.trim(article.getContent()));
         clearContent = StringUtils.trimAllWhitespace(clearContent);
         clearContent = clearContent.substring(0, clearContent.length() < summaryLength ? clearContent.length() : summaryLength);

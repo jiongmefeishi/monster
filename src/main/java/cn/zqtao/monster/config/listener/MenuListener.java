@@ -21,8 +21,8 @@ import org.springframework.util.StringUtils;
 
 import java.util.Optional;
 
-import static cn.zqtao.monster.model.constant.NoteBlogV4.Init.INIT_NOT;
-import static cn.zqtao.monster.model.constant.NoteBlogV4.Init.INIT_STATUS;
+import static cn.zqtao.monster.model.constant.Monster.Init.INIT_NOT;
+import static cn.zqtao.monster.model.constant.Monster.Init.INIT_STATUS;
 import static cn.zqtao.monster.model.entity.permission.NBSysMenu.MenuType.LEAF;
 import static cn.zqtao.monster.model.entity.permission.NBSysMenu.MenuType.PARENT;
 

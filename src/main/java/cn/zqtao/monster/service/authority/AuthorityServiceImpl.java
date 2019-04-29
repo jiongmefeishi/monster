@@ -4,7 +4,7 @@ import cn.hutool.crypto.SecureUtil;
 import cn.zqtao.monster.config.application.NBContext;
 import cn.zqtao.monster.dao.repository.*;
 import cn.zqtao.monster.exception.InitException;
-import cn.zqtao.monster.model.constant.NoteBlogV4;
+import cn.zqtao.monster.model.constant.Monster;
 import cn.zqtao.monster.model.entity.permission.*;
 import cn.zqtao.monster.model.entity.permission.pk.UserRoleKey;
 import cn.zqtao.monster.model.pojo.business.LayuiXTree;
@@ -55,7 +55,7 @@ public class AuthorityServiceImpl implements AuthorityService {
 
     @Override
     public void initMasterAccount(String username, String password, String email) {
-        Long masterRoleId = blogContext.getApplicationObj(NoteBlogV4.Session.WEBMASTER_ROLE_ID);
+        Long masterRoleId = blogContext.getApplicationObj(Monster.Session.WEBMASTER_ROLE_ID);
         if (masterRoleId == null) {
             throw new InitException("初始化权限系统出错，管理员角色未初始化！");
         }
@@ -71,7 +71,7 @@ public class AuthorityServiceImpl implements AuthorityService {
         NBSysUser u = userRepository.saveAndFlush(user);
         if (u != null) {
             paramRepository.updateInitParam("1", "is_set_master");
-            paramRepository.updateValueByName(NoteBlogV4.Param.MAIL_SENDER_NAME, u.getNickname());
+            paramRepository.updateValueByName(Monster.Param.MAIL_SENDER_NAME, u.getNickname());
             UserRoleKey urk = new UserRoleKey();
             urk.setRoleId(masterRoleId);
             urk.setUserId(u.getId());

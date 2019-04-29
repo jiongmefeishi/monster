@@ -3,7 +3,7 @@ package cn.zqtao.monster.model.constant;
 /**
  * 一些全局的固定值
  */
-public interface NoteBlogV4 {
+public interface Monster {
 
     /**
      * 初始化的时候的一些参数key

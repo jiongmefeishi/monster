@@ -8,7 +8,7 @@ import cn.hutool.json.JSONUtil;
 import lombok.extern.slf4j.Slf4j;
 import cn.zqtao.monster.config.application.NBContext;
 import cn.zqtao.monster.exception.MethodNotMatchException;
-import cn.zqtao.monster.model.constant.NoteBlogV4;
+import cn.zqtao.monster.model.constant.Monster;
 import cn.zqtao.monster.model.constant.Upload;
 import cn.zqtao.monster.model.entity.permission.NBSysUser;
 import cn.zqtao.monster.model.pojo.business.Base64MultipartFile;
@@ -98,7 +98,7 @@ public class NBUtils implements ApplicationContextAware {
      * @return
      */
     public static NBSysUser getSessionUser() {
-        Cookie cookie = CookieUtils.getCookie(getCurrentRequest(), NoteBlogV4.Session.SESSION_ID_COOKIE);
+        Cookie cookie = CookieUtils.getCookie(getCurrentRequest(), Monster.Session.SESSION_ID_COOKIE);
         if (cookie != null) {
             String sessionId = cookie.getValue();
             return applicationContext.getBean(NBContext.class).getSessionUser(sessionId);
@@ -270,7 +270,7 @@ public class NBUtils implements ApplicationContextAware {
      */
     @SuppressWarnings("unchecked")
     public static <T> UploadService<T> getUploadServiceByConfig() {
-        final String name = NoteBlogV4.Param.UPLOAD_TYPE;
+        final String name = Monster.Param.UPLOAD_TYPE;
         final String local = "local", qiniu = "qiniu";
         String config = applicationContext.getBean(ParamService.class).getValueByName(name);
         if (config != null) {

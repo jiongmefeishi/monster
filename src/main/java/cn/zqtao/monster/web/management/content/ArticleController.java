@@ -28,7 +28,7 @@ import java.util.Optional;
 
 import static cn.zqtao.monster.config.permission.NBAuth.Group.AJAX;
 import static cn.zqtao.monster.config.permission.NBAuth.Group.ROUTER;
-import static cn.zqtao.monster.model.constant.NoteBlogV4.Session.SESSION_ID_COOKIE;
+import static cn.zqtao.monster.model.constant.Monster.Session.SESSION_ID_COOKIE;
 import static cn.zqtao.monster.model.entity.permission.NBSysResource.ResType.NAV_LINK;
 import static cn.zqtao.monster.model.entity.permission.NBSysResource.ResType.OTHER;
 

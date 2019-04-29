@@ -7,7 +7,7 @@ import cn.hutool.json.JSONUtil;
 import lombok.extern.slf4j.Slf4j;
 import cn.zqtao.monster.dao.repository.ParamRepository;
 import cn.zqtao.monster.dao.repository.UserRepository;
-import cn.zqtao.monster.model.constant.NoteBlogV4;
+import cn.zqtao.monster.model.constant.Monster;
 import cn.zqtao.monster.model.entity.permission.NBSysUser;
 import cn.zqtao.monster.model.pojo.business.QqLoginModel;
 import cn.zqtao.monster.model.pojo.framework.NBR;
@@ -36,8 +36,8 @@ public class QqLoginServiceImpl implements LoginService<QqLoginModel> {
     @Override
     public NBR doLogin(QqLoginModel model) {
         try {
-            String appId = paramRepository.findByName(NoteBlogV4.Param.APP_ID).getValue();
-            String appKey = paramRepository.findByName(NoteBlogV4.Param.APP_KEY).getValue();
+            String appId = paramRepository.findByName(Monster.Param.APP_ID).getValue();
+            String appKey = paramRepository.findByName(Monster.Param.APP_KEY).getValue();
 
             Map<String, Object> p1 = MapUtil.of("grant_type", "authorization_code");
             p1.put("client_id", appId);
@@ -58,7 +58,7 @@ public class QqLoginServiceImpl implements LoginService<QqLoginModel> {
             if (json2.getInt("ret") == 0) {
                 NBSysUser user = userRepository.findByQqOpenIdAndEnable(openId, true);
                 if (user != null) {
-                    return ok("授权成功！", "/").put(NoteBlogV4.Session.LOGIN_USER, user);
+                    return ok("授权成功！", "/").put(Monster.Session.LOGIN_USER, user);
                 } else {
                     NBSysUser lockedUser = userRepository.findByQqOpenIdAndEnable(openId, false);
                     if (lockedUser != null) {
@@ -69,7 +69,7 @@ public class QqLoginServiceImpl implements LoginService<QqLoginModel> {
                     NBSysUser registerUser = NBSysUser.builder().nickname(nickname).avatar(avatar).qqOpenId(openId).build();
                     NBSysUser afterRegisterUser = userRepository.save(registerUser);
                     if (afterRegisterUser != null) {
-                        return ok("授权成功！", "/").put(NoteBlogV4.Session.LOGIN_USER, afterRegisterUser);
+                        return ok("授权成功！", "/").put(Monster.Session.LOGIN_USER, afterRegisterUser);
                     } else {
                         return error("QQ登录授权失败，原因：注册失败！");
                     }

@@ -1,7 +1,7 @@
 package cn.zqtao.monster.web.frontend;
 
 import cn.zqtao.monster.dao.repository.*;
-import cn.zqtao.monster.model.constant.NoteBlogV4;
+import cn.zqtao.monster.model.constant.Monster;
 import cn.zqtao.monster.model.entity.NBArticle;
 import cn.zqtao.monster.model.entity.NBComment;
 import cn.zqtao.monster.model.entity.NBParam;
@@ -24,8 +24,8 @@ import java.util.List;
 import java.util.Map;
 
 import static java.util.stream.Collectors.toMap;
-import static cn.zqtao.monster.model.constant.NoteBlogV4.ParamValue.PAGE_MODERN_BUTTON;
-import static cn.zqtao.monster.model.constant.NoteBlogV4.ParamValue.PAGE_MODERN_DEFAULT;
+import static cn.zqtao.monster.model.constant.Monster.ParamValue.PAGE_MODERN_BUTTON;
+import static cn.zqtao.monster.model.constant.Monster.ParamValue.PAGE_MODERN_DEFAULT;
 
 @Controller
 public class IndexController extends BaseController {
@@ -56,7 +56,7 @@ public class IndexController extends BaseController {
 
     @RequestMapping(value = {"", "/index"})
     public String index(Model model) {
-        String pageModern = paramRepository.findByName(NoteBlogV4.Param.PAGE_MODERN).getValue();
+        String pageModern = paramRepository.findByName(Monster.Param.PAGE_MODERN).getValue();
         model.addAttribute("articleCount", articleRepository.countByDraft(false));
         model.addAttribute("cateList", cateRepository.findAll());
         return handleStyle(
@@ -82,8 +82,8 @@ public class IndexController extends BaseController {
         orders.put("top", "desc");
         orders.put("post", "desc");
         Sort sort = getJpaSortWithOther(pagination, orders);
-        NBParam pageParam = paramRepository.findByName(NoteBlogV4.Param.BLOG_INDEX_PAGE_SIZE);
-        NBParam modernParam = paramRepository.findByName(NoteBlogV4.Param.PAGE_MODERN);
+        NBParam pageParam = paramRepository.findByName(Monster.Param.BLOG_INDEX_PAGE_SIZE);
+        NBParam modernParam = paramRepository.findByName(Monster.Param.PAGE_MODERN);
         int modern = Integer.valueOf(modernParam.getValue());
         int pageSize = Integer.valueOf(pageParam.getValue());
         pageSize = modern == 0 ? pageSize > 10 ? pageSize : pagination.getLimit() : pagination.getLimit();

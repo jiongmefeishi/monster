@@ -6,7 +6,7 @@ import cn.zqtao.monster.dao.repository.MenuRepository;
 import cn.zqtao.monster.dao.repository.ResourceRepository;
 import cn.zqtao.monster.dao.repository.RoleRepository;
 import cn.zqtao.monster.dao.repository.RoleResourceRepository;
-import cn.zqtao.monster.model.constant.NoteBlogV4;
+import cn.zqtao.monster.model.constant.Monster;
 import cn.zqtao.monster.model.entity.permission.NBSysMenu;
 import cn.zqtao.monster.model.entity.permission.NBSysResource.ResType;
 import cn.zqtao.monster.model.entity.permission.NBSysRole;
@@ -148,7 +148,7 @@ public class AuthorityController extends BaseController {
     @NBAuth(value = "permission:menu:add", remark = "添加角色菜单界面", group = Group.ROUTER)
     public String addMenu(Model model, Long roleId, String parentId) {
         if (StringUtils.isEmpty(roleId)) {
-            return NoteBlogV4.Session.ERROR_ROUTER;
+            return Monster.Session.ERROR_ROUTER;
         }
         model.addAttribute("roleId", roleId);
         model.addAttribute("parentId", parentId);
@@ -164,7 +164,7 @@ public class AuthorityController extends BaseController {
     @NBAuth(value = "permission:menu:edit", remark = "修改角色菜单界面", group = Group.ROUTER)
     public String addMenu(Model model, Long menuId, Long roleId) {
         if (StringUtils.isEmpty(menuId) || StringUtils.isEmpty(roleId)) {
-            return NoteBlogV4.Session.ERROR_ROUTER;
+            return Monster.Session.ERROR_ROUTER;
         }
         List<Long> resIds = roleResourceRepository.findResourceIdByRoleId(roleId);
         if (resIds != null && resIds.size() > 0) {

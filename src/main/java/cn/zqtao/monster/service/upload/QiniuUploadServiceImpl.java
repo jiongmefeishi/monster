@@ -14,7 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 import cn.zqtao.monster.dao.repository.ParamRepository;
 import cn.zqtao.monster.model.constant.LayUploader;
 import cn.zqtao.monster.model.constant.NkUploader;
-import cn.zqtao.monster.model.constant.NoteBlogV4;
+import cn.zqtao.monster.model.constant.Monster;
 import cn.zqtao.monster.model.constant.Upload;
 import cn.zqtao.monster.model.entity.NBUpload;
 import cn.zqtao.monster.model.pojo.framework.NBR;
@@ -55,7 +55,7 @@ public class QiniuUploadServiceImpl implements UploadService<Object> {
             if (res != null && res.isOK()) {
                 JSONObject respObj = JSONUtil.parseObj(res.bodyString());
                 String generateFileName = respObj.getStr("key");
-                String qiniuDomain = paramRepository.findByName(NoteBlogV4.Param.QINIU_DOMAIN).getValue();
+                String qiniuDomain = paramRepository.findByName(Monster.Param.QINIU_DOMAIN).getValue();
                 log.info("上传至七牛云服务器成功！，文件：[{}]", generateFileName);
                 extra.accept(s);
                 String src = qiniuDomain + "/" + generateFileName;
@@ -91,7 +91,7 @@ public class QiniuUploadServiceImpl implements UploadService<Object> {
             if (res != null && res.isOK()) {
                 JSONObject respObj = JSONUtil.parseObj(res.bodyString());
                 String generateFileName = respObj.getStr("key");
-                String qiniuDomain = paramRepository.findByName(NoteBlogV4.Param.QINIU_DOMAIN).getValue();
+                String qiniuDomain = paramRepository.findByName(Monster.Param.QINIU_DOMAIN).getValue();
                 extra.accept(t);
                 String src = qiniuDomain + "/" + generateFileName;
                 log.info("上传至七牛云服务器成功！，文件：[{}]", generateFileName);

@@ -1,7 +1,7 @@
 package cn.zqtao.monster.service.settings;
 
 import cn.zqtao.monster.dao.repository.ParamRepository;
-import cn.zqtao.monster.model.constant.NoteBlogV4;
+import cn.zqtao.monster.model.constant.Monster;
 import cn.zqtao.monster.model.constant.Upload;
 import cn.zqtao.monster.model.pojo.framework.NBR;
 import cn.zqtao.monster.util.CacheUtils;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.util.Map;
 
-import static cn.zqtao.monster.model.constant.NoteBlogV4.Param.*;
+import static cn.zqtao.monster.model.constant.Monster.Param.*;
 
 @Service
 @Transactional(rollbackOn = Exception.class)
@@ -26,13 +26,13 @@ public class SettingsServiceImpl implements SettingsService {
 
     @Override
     public NBR updateSwitch(String name, String value) {
-        if (name.equalsIgnoreCase(NoteBlogV4.Param.IS_OPEN_OSS_UPLOAD)) {
+        if (name.equalsIgnoreCase(Monster.Param.IS_OPEN_OSS_UPLOAD)) {
             CacheUtils.removeParamCache(name);
-            CacheUtils.removeParamCache(NoteBlogV4.Param.UPLOAD_TYPE);
+            CacheUtils.removeParamCache(Monster.Param.UPLOAD_TYPE);
             final String type = "0".equalsIgnoreCase(value) ? Upload.Method.LOCAL.name() : Upload.Method.QINIU.name();
-            paramRepository.updateValueByName(NoteBlogV4.Param.UPLOAD_TYPE, type);
+            paramRepository.updateValueByName(Monster.Param.UPLOAD_TYPE, type);
         }
-        if (NoteBlogV4.Param.STATISTIC_ANALYSIS.equalsIgnoreCase(name)) {
+        if (Monster.Param.STATISTIC_ANALYSIS.equalsIgnoreCase(name)) {
             return update(name, value, () -> {
                 CacheUtils.removeParamCache(name);
                 return NBR.ok();
@@ -51,9 +51,9 @@ public class SettingsServiceImpl implements SettingsService {
             value = val.split(comma)[0];
         }
         return update(name, value, () -> {
-            if (name.equalsIgnoreCase(NoteBlogV4.Param.IS_OPEN_OSS_UPLOAD)) {
+            if (name.equalsIgnoreCase(Monster.Param.IS_OPEN_OSS_UPLOAD)) {
                 final String type = "0".equalsIgnoreCase(val) ? Upload.Method.LOCAL.name() : Upload.Method.QINIU.name();
-                paramRepository.updateValueByName(NoteBlogV4.Param.UPLOAD_TYPE, type);
+                paramRepository.updateValueByName(Monster.Param.UPLOAD_TYPE, type);
             } else if (menuLink.equalsIgnoreCase(name) && val.split(comma).length > 0) {
                 String value2 = val.split(comma)[1];
                 String value3 = "";

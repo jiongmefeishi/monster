@@ -3,7 +3,7 @@ package cn.zqtao.monster.config.listener;
 import lombok.extern.slf4j.Slf4j;
 import cn.zqtao.monster.dao.repository.ParamRepository;
 import cn.zqtao.monster.exception.UploadPathMissException;
-import cn.zqtao.monster.model.constant.NoteBlogV4;
+import cn.zqtao.monster.model.constant.Monster;
 import cn.zqtao.monster.model.constant.Upload;
 import cn.zqtao.monster.model.entity.NBParam;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +42,7 @@ public class UploadFolderListener implements ApplicationListener<ApplicationRead
      * @throws Exception
      */
     private void initUploadFolder() {
-        NBParam param = paramRepository.findByName(NoteBlogV4.Param.UPLOAD_TYPE);
+        NBParam param = paramRepository.findByName(Monster.Param.UPLOAD_TYPE);
         String value = param.getValue();
         if (Upload.Method.LOCAL.name().equalsIgnoreCase(value)) {
             String uploadPathKey = "noteblog.upload.path";
