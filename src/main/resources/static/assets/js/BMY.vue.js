@@ -160,12 +160,12 @@ var template = {
         '<div class="layui-tab layui-tab-card">' +
         '   <ul class="layui-tab-title select-none">' +
         '       <template v-if="order == 1">' +
-        '       <li class="layui-this" v-show="info">网站信息</li>' +
-        '       <li :class="{ \'layui-this\' : !info }">会员中心</li>' +
+        '       <li class="layui-this" v-show="info">怪兽营</li>' +
+        '       <li :class="{ \'layui-this\' : !info }">怪兽中心</li>' +
         '       </template>' +
         '       <template v-if="order != 1">' +
-        '           <li class="layui-this">会员中心</li>' +
-        '           <li :class="{ \'layui-this\' : !info }" v-show="info">网站信息</li>' +
+        '           <li class="layui-this">怪兽中心</li>' +
+        '           <li :class="{ \'layui-this\' : !info }" v-show="info">怪兽营</li>' +
         '       </template>' +
         '   </ul>' +
         '   <div class="layui-tab-content">' +
@@ -176,13 +176,13 @@ var template = {
         '       <div class="layui-tab-item" :class="{ \'layui-show\' : !info }">' +
         '           <p style="text-align: center" v-show="su == null">' +
         '               <a v-if="qq == 1" @click="tip()" href="/api/qq" class="layui-btn layui-btn-sm layui-btn-primary">' +
-        '                   <i class="fa fa-qq"></i> 网站用户' +
+        '                   <i class="fa fa-qq"></i> 兽营兽君' +
         '               </a>' +
-        '               <a href="/login" class="layui-btn layui-btn-sm layui-btn-primary"><i class="fa fa-user-o"></i> 网站管理</a>' +
+        '               <a href="/login" class="layui-btn layui-btn-sm layui-btn-primary"><i class="fa fa-user-o"></i> 兽营管理</a>' +
         '           </p>' +
         '           <p v-if="su != null" style="padding-left: 20px;">' +
         '               <a href="/token/logout" style="font-size: 14px;">' +
-        '                   <img id="logout" @mouseover="tipsOver()" @mouseout="tipsOut()" style="height: 45px;width: 45px;border: 1px solid #ccc;" class="layui-circle" :src="su != null ?su.avatar:\'\'">&nbsp;&nbsp;欢迎你，{{su.nickname}}！' +
+        '                   <img id="logout" @mouseover="tipsOver()" @mouseout="tipsOut()" style="height: 45px;width: 45px;border: 1px solid #ccc;" class="layui-circle" :src="su != null ?su.avatar:\'\'">&nbsp;&nbsp;欢迎兽君，{{su.nickname}}！' +
         '               </a>' +
         '               &nbsp;<a v-if="su !=null && su.dri == 1" href="/management/index" target="_blank" class="layui-text" style="font-style: italic;color: #F44336;">后台管理 </a>' +
         '           </p>' +
@@ -192,13 +192,13 @@ var template = {
         '       <div class="layui-tab-item layui-show">' +
         '           <p style="text-align: center" v-show="su == null">' +
         '               <a v-if="qq == 1" @click="tip()" href="/api/qq" class="layui-btn layui-btn-sm layui-btn-primary">' +
-        '                   <i class="fa fa-qq"></i> 网站用户' +
+        '                   <i class="fa fa-qq"></i> 兽营兽君' +
         '               </a>' +
-        '               <a href="/login" class="layui-btn layui-btn-sm layui-btn-primary"><i class="fa fa-user-o"></i> 网站管理</a>' +
+        '               <a href="/login" class="layui-btn layui-btn-sm layui-btn-primary"><i class="fa fa-user-o"></i> 兽营管理</a>' +
         '           </p>' +
         '           <p v-if="su != null" style="padding-left: 20px;">' +
         '               <a href="/token/logout" style="font-size: 14px;">' +
-        '                   <img id="logout" @mouseover="tipsOver()" @mouseout="tipsOut()" style="height: 45px;width: 45px;" class="layui-circle" :src="su != null ?su.avatar:\'\'">&nbsp;&nbsp;欢迎你，{{su.nickname}}！' +
+        '                   <img id="logout" @mouseover="tipsOver()" @mouseout="tipsOut()" style="height: 45px;width: 45px;" class="layui-circle" :src="su != null ?su.avatar:\'\'">&nbsp;&nbsp;欢迎兽君，{{su.nickname}}！' +
         '               </a>' +
         '               &nbsp;<a v-if="su !=null && su.dri == 1" href="/management/index" target="_blank" class="layui-text" style="font-style: italic;color: #F44336;">后台管理 </a>' +
         '           </p>' +
@@ -573,7 +573,7 @@ var template = {
         '<div data-pushbar-id="bottomNav" class="pushbar from_bottom">' +
         '    <div class="layui-container" style="padding-top: 20px;padding-bottom: 15px;">' +
         '        <fieldset class="layui-elem-field layui-field-title">' +
-        '            <legend style="text-align: center;font-size: 16px;">导航按钮</legend>' +
+        '            <legend style="text-align: center;font-size: 16px;">兽营导航</legend>' +
         '        </fieldset>' +
         '        <p class="layui-breadcrumb" lay-separator="|" style="text-align: center;margin-top: 10px;">' +
         '          <a href="/index">{{params.menu_home}}</a>' +
@@ -587,26 +587,26 @@ var template = {
         '            <li class="layui-timeline-item">' +
         '                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>' +
         '                <div class="layui-timeline-content layui-text">' +
-        '                    <h3 class="layui-timeline-title" style="font-size: 16px;">博客信息</h3>' +
-        '                    <p style="padding-bottom: 5px;">笔记博客（NoteLofter）：是专门为 Java 程序员提供的一套开源的笔记/博客平台，同时也可作为初学者的上手学习项目。</p>' +
+        '                    <h3 class="layui-timeline-title" style="font-size: 16px;">兽营简介</h3>' +
+        '                    <p style="padding-bottom: 5px;">怪兽营（Monster Camp）怪兽大本营，吹响怪兽集结号，召唤各位怪兽君一起快乐咆哮...怪兽咆哮...嗷呜...嗷呜...嗷呜...</p>' +
         '                    <p style="border-top: 1px solid #f5f5f5;padding-top: 5px;padding-bottom: 5px;">' +
-        '                        交流讨论：<i class="fa fa-qq"></i>' +
-        '                        <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=7bd7c01acf4e6124bfaab5a6d10504b917d5292f029b66887d00006a16a00930">' +
-        '                            697053454' +
+        '                        快乐咆哮：<i class="fa fa-qq"></i>' +
+        '                        <a target="_blank" href="http://www.zqtaotao.cn">' +
+        '                            453395742' +
         '                        </a>。' +
         '                    </p>' +
         '                    <p style="border-top:1px solid #F5F5F5;padding-top: 5px;">' +
-        '                        项目源码：<i class="fa fa-github-alt"></i>' +
-        '                        <a target="_blank" href="https://github.com/miyakowork/noteblogv4">miyakowork/noteblogv4</a>。' +
+        '                        兽营源码：<i class="fa fa-github-alt"></i>' +
+        '                        <a target="_blank" href="https://github.com/zqtao2332">Monster Camp</a>。' +
         '                    </p>' +
         '                </div>' +
         '            </li>' +
         '            <li class="layui-timeline-item">' +
         '                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>' +
         '                <div class="layui-timeline-content layui-text">' +
-        '                    <h3 class="layui-timeline-title" style="font-size: 16px;">作者</a> </h3>' +
-        '                    <p>电子邮箱：<i class="fa fa-envelope"></i> <a href="#">wuwenbinwork#163.com</p>' +
-        '                    <p>个人网站：<i class="fa fa-link"></i> <a href="https://wuwenbin.me">https://wuwenbin.me</p>' +
+        '                    <h3 class="layui-timeline-title" style="font-size: 16px;">怪兽栈长</a> </h3>' +
+        '                    <p>电子邮箱：<i class="fa fa-envelope"></i> <a href="#">zqtao23#163.com</p>' +
+        '                    <p>个人网站：<i class="fa fa-link"></i> <a href="http://www.zqtaotao.cn">www.zqtaotao.cn</p>' +
         '                </div>' +
         '            </li>' +
         '        </ul>' +
