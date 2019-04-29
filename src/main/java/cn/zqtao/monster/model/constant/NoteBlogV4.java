@@ -17,11 +17,11 @@ public interface NoteBlogV4 {
         String INIT_NOT = "0";
         String INIT_SURE = "1";
 
-        String INIT_WEBSITE_TILE = "笔记博客";
+        String INIT_WEBSITE_TILE = "怪兽营";
         String INIT_WEBSITE_LOGO_WORDS = "logo处文字";
         String INIT_WEBSITE_LOGO_SMALL_WORDS = "这是一个小标题";
-        String INIT_FOOTER_WORDS = "此处一般可写一些备案号之类的文字";
-        String INIT_INDEX_TOP_WORDS = "写下你的座右铭吧";
+        String INIT_FOOTER_WORDS = "此处填写备案号之类的文字";
+        String INIT_INDEX_TOP_WORDS = "宣告属于的怪兽咆哮";
         String INIT_MENU_HOME = "主页";
         String INIT_MENU_PROJECT = "作品";
         String INIT_MENU_NOTE = "笔记";
@@ -32,10 +32,10 @@ public interface NoteBlogV4 {
         String INIT_MENU_CLOUD_FILE = "文件";
         String INIT_ALIPAY = "/static/assets/img/alipay.png";
         String INIT_WECHAT_PAY = "/static/assets/img/wechat.png";
-        String INIT_INFO_LABEL = "此处填写网站的一些信息";
+        String INIT_INFO_LABEL = "此处填写怪兽营简介";
         String INIT_COMMENT_WORD = "遵守国家法律法规，请勿回复无意义内容，请不要回复嵌套过多的楼层！";
         String INIT_PROJECT_WORD = "资源分享";
-        String INIT_MESSAGE_PANEL_WORDS = "欢迎大家留言，有什么问题、建议、意见或者疑问可随时提出，qq群：<a href=\"https://jq.qq.com/?_wv=1027&k=5ypf8jR\" target=\"_blank\">697053454</a>。<span style=\"color:red;\">请不要回复嵌套过多的楼层！</span>";
+        String INIT_MESSAGE_PANEL_WORDS = "欢迎小怪兽们留言，有什么问题、建议、意见或者疑问可随时提出..<span style=\"color:red;\">请不要回复嵌套过多的楼层！</span>";
 
         /**
          * 默认上传方式为本地服务器上传
