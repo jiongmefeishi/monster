@@ -21,7 +21,7 @@ public interface Monster {
         String INIT_WEBSITE_LOGO_WORDS = "logo处文字";
         String INIT_WEBSITE_LOGO_SMALL_WORDS = "这是一个小标题";
         String INIT_FOOTER_WORDS = "此处填写备案号之类的文字";
-        String INIT_INDEX_TOP_WORDS = "宣告属于的怪兽咆哮";
+        String INIT_INDEX_TOP_WORDS = "宣告属于自己的怪兽咆哮";
         String INIT_MENU_HOME = "主页";
         String INIT_MENU_PROJECT = "作品";
         String INIT_MENU_NOTE = "笔记";
