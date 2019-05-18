@@ -1,7 +1,7 @@
 # monster
 怪兽营
 
-### 重新整理了一下博客代码
+### 迁移代码到GitHub管理，顺便重新整理了一下博客代码
 
 网址：http://www.zqtaotao.cn/
   
